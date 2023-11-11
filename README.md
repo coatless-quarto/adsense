@@ -22,16 +22,17 @@ This command will download and install the extension under the `_extensions` sub
 
 ## Usage
 
-Open the `_quarto.yml` Project file and add the following key:
+Open either the [`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata) Project file and add the following:
 
 ```yml
 adsense:
-    google-adsense: ca-pub-XXXXXXXXXXXXXXXX
+  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+
 filters:
 - adsense
 ```
 
-where `ca-pub-XXXXXXXXXXXXXXXX` is your Google Adsense [Publisher ID](https://support.google.com/adsense/answer/105516?hl=en).
+where `ca-pub-XXXXXXXXXXXXXXXX` in `publisher-id` is your Google Adsense [Publisher ID](https://support.google.com/adsense/answer/105516?hl=en).
 
 **Note:** Ads may take up to an hour to appear on the page/project.
 
