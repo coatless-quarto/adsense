@@ -1,0 +1,11 @@
+---
+title: "Demo: Ads Shown"
+adsense:
+  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+filters:
+- adsense
+---
+
+On this page, you should see the Google Adsense code being found inside of the page's header tag. 
+
+**Note:** Ads may take up to an hour to appear on the page/project for the first time the webpage is opened.
