@@ -1,0 +1,46 @@
+[
+  {
+    "objectID": "example.html",
+    "href": "example.html",
+    "title": "Demo: Ads Shown",
+    "section": "",
+    "text": "On this page, you should see the Google Adsense code being found inside of the page’s header tag.\nNote: Ads may take up to an hour to appear on the page/project for the first time the webpage is opened.",
+    "crumbs": [
+      "Basics",
+      "Demo: Ads Shown"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "The adsense extension allows you to incorporate Google Adsense ad’s on various Quarto formats, including HTML, Websites, and Books.\nThis extension is required as Quarto does not natively support Google Adsense, but does have support for Google Analytics.",
+    "crumbs": [
+      "Basics",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "Home",
+    "section": "Installation",
+    "text": "Installation\nTo install the adsense extension, follow these steps:\n\nOpen your terminal.\nExecute the following command:\n\nquarto add coatless-quarto/adsense\nThis command will download and install the extension under the _extensions subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.",
+    "crumbs": [
+      "Basics",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "Home",
+    "section": "Usage",
+    "text": "Usage\nThere are two ways you can setup the extension: 1. in a separate configuration file (_quarto.yml or _metadata.yml) or 2. inside a document’s header.\n\nMulti-page Projects: Websites\nIf you have a website or book, you can use either the _quarto.yml or _metadata.yml files to avoid needing to consistently set the value. This means, you would only need to include:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nFor more information, please see Quarto’s documentation on Shared Metadata.\n\n\nSingle Page Projects: HTML Document\nIf you only have one HTML document, we recommend setting up the extension by placing the required fields into the document’s header section, e.g.\n---\ntitle: \"Demo Setup\"\nauthor: \"FirstName LastName\"\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\n---",
+    "crumbs": [
+      "Basics",
+      "Home"
+    ]
+  }
+]
