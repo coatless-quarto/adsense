@@ -1,11 +1,18 @@
 ---
-title: "Demo: Ads Shown"
+title: "Demo: Ads In Header"
 adsense:
-  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+  publisher-id: ca-pub-4979996562647159
 filters:
 - adsense
 ---
 
-On this page, you should see the Google Adsense code being found inside of the page's header tag. 
+On this page, you should see the Google Adsense code being found inside of the page's header tag, e.g. 
+
+```yaml
+adsense:
+  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+filters:
+- adsense
+```
 
 **Note:** Ads may take up to an hour to appear on the page/project for the first time the webpage is opened.
