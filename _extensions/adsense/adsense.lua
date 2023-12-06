@@ -1,11 +1,27 @@
+----
+--- Setup variables for default initialization
+
+-- Check to see if we've already defined the adsense Unit
+-- Note: This should only trigger _once_
 local isAdsenseUnitMissing = true
 
-local function isEmptyString(s)
+-- Check to see if we should show ads on the given page
+local enableAds = true
+
+----
+--- Process initialization
+
+-- Check if variable is present and not just the empty string
+local function isVariableEmpty(s)
   return s == nil or s == ''
 end
 
-local function stringHasContents(s)
-  return not isEmptyString(s)
+local function isVariablePopulated(s)
+  return not isVariableEmpty(s)
+end
+
+local function isBoolean(value)
+  return value == true or value == false
 end
 
 -- Ad unit HTML
@@ -22,32 +38,42 @@ end
 -- Retrieve publisher and setup ad unit
 function Meta(m)
 
+  -- Detect HTML format (excluding epub which won't handle fa)
+  if not quarto.doc.is_format("html:js") then
+    quarto.log.error("The `adsense` extensions works only on HTML powered Quarto projects.")
+  end 
+
+  -- Check for configuration
   local adsense_meta = m.adsense
-  if isEmptyString(adsense_meta) then
+  if isVariableEmpty(adsense_meta) then
     quarto.log.error("The Quarto project is missing the `adsense` key in either the document header, `_quarto.yml`, or `_metadata.yml`.")
   end
 
-  -- Detect HTML format (excluding epub which won't handle fa)
-  if quarto.doc.is_format("html:js") then
-    
-    -- Retrieve publisherID from meta
-    local publisher_id = pandoc.utils.stringify(adsense_meta['publisher-id'])
-    if stringHasContents(publisher_id) then
-      if isAdsenseUnitMissing then
-        -- Avoid re-running insertion
-        isAdsenseUnitMissing = false
-        -- Customize the ad unit script tag
-        local adsense_customized_adunit_html = adsense_html(publisher_id)
-        -- Inject the customized unit into the HTML document's header section 
-        -- using Quarto's API.
-        quarto.doc.include_text("in-header", adsense_customized_adunit_html)
-      end
-    else 
-      quarto.log.error("The `publisher-id` is not set. Please set the `publisher-id` by either the value in the current document, the projects `_quarto.yml`, or `_metadata.yml` for the directory.")
-    end 
+  -- Retrieve publisherID from meta
+  local publisher_id = nil
+  if isVariablePopulated(adsense_meta['publisher-id']) then
+    publisher_id = pandoc.utils.stringify(adsense_meta['publisher-id'])
   else 
-    quarto.log.error("The `adsense` extensions works only on HTML powered Quarto projects.")
+    quarto.log.error("The `publisher-id` is not set. Please set the `publisher-id` by either the value in the current document, the projects `_quarto.yml`, or `_metadata.yml` for the directory.")
   end 
+
+  -- Retrieve enable-ads from meta
+  if isVariablePopulated(adsense_meta['enable-ads']) then
+    enableAds = pandoc.utils.stringify(adsense_meta['enable-ads'])
+    if not isBoolean(enableAds) then
+      quarto.log.error("The `enable-ads` must be either `true` or `false`, not `" .. showAds .. "`. Please fix by correcting the value in the current document, the projects `_quarto.yml`, or `_metadata.yml` for the directory.")
+    end 
+  end
+
+  if enableAds and isAdsenseUnitMissing then
+    -- Avoid re-running insertion
+    isAdsenseUnitMissing = false
+    -- Customize the ad unit script tag
+    local adsense_customized_adunit_html = adsense_html(publisher_id)
+    -- Inject the customized unit into the HTML document's header section 
+    -- using Quarto's API.
+    quarto.doc.include_text("in-header", adsense_customized_adunit_html)
+  end
 
   return m
 end
