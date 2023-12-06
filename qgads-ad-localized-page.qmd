@@ -1,0 +1,33 @@
+---
+title: "Adding Ads for One Webpage in the Header"
+adsense:
+  publisher-id: ca-pub-4979996562647159
+filters:
+- adsense
+---
+
+## Overview
+
+This example provides instructions on incorporating Google Adsense code into the Quarto document generating a specific web page, allowing for the placement of ads only within the selected page. By following the steps outlined below, you can seamlessly integrate ads into the desired page.
+
+## Implementation
+
+To include Google Adsense in the header, insert the following YAML code snippet into the Quarto document's header section:
+
+```yaml
+adsense:
+  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+filters:
+- adsense
+```
+
+This configuration specifies the publisher ID and activates the adsense filter, ensuring that the ads are properly integrated into the header.
+
+:::{.callout-note}
+Please be aware that it may take up to an hour for ads to appear on the page or project for the first time the webpage is opened. This delay is standard and expected as the Adsense system processes the request and delivers the ads accordingly.
+:::
+
+## Result
+
+Ads should now be served only on a single page within your Quarto website.
+
