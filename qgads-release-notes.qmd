@@ -8,6 +8,17 @@ format:
     toc: true
 ---
 
+# 2.0.0: Selective Monetize (12-??-2023) [DEV]
+
+## Features
+
+- Added `enable-ads` option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.
+
+```yml
+adsense:
+  enable-ads: false
+```
+
 # 1.0.0: Monetize (11-11-2023)
 
 ## Features
