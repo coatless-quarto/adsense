@@ -1,0 +1,22 @@
+---
+title: "Enabling an Ad-Free Page with Global Configuration"
+adsense:
+  enable-ads: false
+---
+
+## Overview
+
+This example demonstrates how to disable ads on specific pages by utilizing a YAML configuration setting. By following these steps, you can easily prevent the insertion of Google Adsense units on individual pages, ensuring an ad-free experience for your users on pages that you do not wish to monetize.
+
+## Configuration
+
+To disable ads on a per-page basis, insert the following code snippet into the YAML header of the desired page:
+
+```yaml
+adsense:
+  enable-ads: false
+```
+
+## Result
+
+Upon setting `enable-ads` to `false`, the Google Adsense unit will not be included in the specified page. Consequently, ads will be effectively disabled, providing a cleaner and ad-free presentation for users accessing that particular page.
