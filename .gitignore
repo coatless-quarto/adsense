@@ -2,5 +2,5 @@
 *.pdf
 *_files/
 /.luarc.json
-
+*_site/
 /.quarto/
