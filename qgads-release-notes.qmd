@@ -1,0 +1,47 @@
+---
+title: "Release Notes"
+date: "11-11-2023"
+date-modified: last-modified
+engine: markdown
+format: 
+  html:
+    toc: true
+---
+
+# 1.0.0: Monetize (11-11-2023)
+
+## Features
+
+- New Google Adsense Extension for Quarto allowing for global or per-page insertion of ad units
+
+### Installation
+
+To install the `adsense` extension, follow these steps:
+
+1. Open your terminal.
+
+2. Execute the following command:
+
+```bash
+quarto add coatless-quarto/adsense
+```
+
+This command will download and install the extension under the `_extensions` subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.
+
+### Usage
+
+Open either the [`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata) Project file and add the following:
+
+```yml
+adsense:
+  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+
+filters:
+- adsense
+```
+
+where `ca-pub-XXXXXXXXXXXXXXXX` in `publisher-id` is your Google Adsense [Publisher ID](https://support.google.com/adsense/answer/105516?hl=en).
+
+:::{.callout-note} 
+Ads may take up to an hour to appear on the page/project.
+:::
