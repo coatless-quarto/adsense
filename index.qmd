@@ -42,6 +42,13 @@ filters:
 - adsense
 ```
 
+If you wish to disable ads on a specific page, then add to the document's YAML header area:
+
+```yml
+adsense:
+  enable-ads: false
+```
+
 For more information, please see Quarto's documentation on [Shared Metadata](https://quarto.org/docs/projects/quarto-projects.html#shared-metadata).
 
 ### Single Page Projects: HTML Document
