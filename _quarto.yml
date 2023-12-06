@@ -16,4 +16,12 @@ website:
       - section: "Basics"
         contents:
           - index.qmd
-          - example.qmd
+          - qgads-ad-localized-page.qmd
+          - qgads-ad-free-page.qmd
+
+# Register Adsense plugin to appear on all pages
+adsense:
+  publisher-id: ca-pub-4979996562647159
+
+filters:
+- adsense
