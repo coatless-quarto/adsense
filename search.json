@@ -2,12 +2,12 @@
   {
     "objectID": "example.html",
     "href": "example.html",
-    "title": "Demo: Ads Shown",
+    "title": "Demo: Ads In Header",
     "section": "",
-    "text": "On this page, you should see the Google Adsense code being found inside of the page’s header tag.\nNote: Ads may take up to an hour to appear on the page/project for the first time the webpage is opened.",
+    "text": "On this page, you should see the Google Adsense code being found inside of the page’s header tag, e.g. \nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\nNote: Ads may take up to an hour to appear on the page/project for the first time the webpage is opened.",
     "crumbs": [
       "Basics",
-      "Demo: Ads Shown"
+      "Demo: Ads In Header"
     ]
   },
   {
