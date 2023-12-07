@@ -1,4 +1,4 @@
-# quarto-google-adsense: A Quarto Extension for Google Adsense
+# quarto-adsense: A Quarto Extension for Google Adsense
 
 The `adsense` extension allows you to incorporate [Google Adsense (GADS)](https://adsense.google.com/start/) ad's on various [Quarto](https://quarto.org/) formats, including [HTML](https://quarto.org/docs/output-formats/html-basics.html), [Websites](https://quarto.org/docs/websites/), and [Books](https://quarto.org/docs/books). 
 
