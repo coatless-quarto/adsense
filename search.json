@@ -59,39 +59,39 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "The adsense extension allows you to incorporate Google Adsense ad’s on various Quarto formats, including HTML, Websites, and Books.\nThis extension is required as Quarto does not natively support Google Adsense, but does have support for Google Analytics.",
+    "text": "The adsense extension allows you to incorporate Google Adsense ad’s on various Quarto formats, including HTML, Websites, and Books. This extension is required as Quarto does not natively support Google Adsense, but does have support for Google Analytics.\nReady to get started? Check out the installation steps and the preferred setup approach using a global configuration.\n\n\n\n\n\n\nImportant\n\n\n\nThis Quarto extension is open source software and is not affiliated with Google. The extension is at best a community effort to simplify the integration of Google’s Adsense product inside of Quarto websites.",
     "crumbs": [
       "Home"
     ]
   },
   {
-    "objectID": "index.html#installation",
-    "href": "index.html#installation",
-    "title": "Home",
-    "section": "Installation",
-    "text": "Installation\nTo install the adsense extension, follow these steps:\n\nOpen your terminal.\nExecute the following command:\n\nquarto add coatless-quarto/adsense\nThis command will download and install the extension under the _extensions subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.",
+    "objectID": "qgads-installation.html",
+    "href": "qgads-installation.html",
+    "title": "Installation Guide for Quarto Adsense Extension",
+    "section": "",
+    "text": "To seamlessly integrate the adsense extension into your Quarto project, follow these straightforward steps:\n\nOpen Your Terminal: Open your terminal or command prompt.\nExecute the Installation Command: Run the following command to automatically download and install the extension:\nquarto add coatless-quarto/adsense\nThis command installs the adsense extension in the _extensions subdirectory of your Quarto project. If you’re utilizing version control, make sure to include this directory in your repository.",
     "crumbs": [
-      "Home"
+      "Installation"
     ]
   },
   {
-    "objectID": "index.html#usage",
-    "href": "index.html#usage",
-    "title": "Home",
+    "objectID": "qgads-installation.html#installation",
+    "href": "qgads-installation.html#installation",
+    "title": "Installation Guide for Quarto Adsense Extension",
+    "section": "",
+    "text": "To seamlessly integrate the adsense extension into your Quarto project, follow these straightforward steps:\n\nOpen Your Terminal: Open your terminal or command prompt.\nExecute the Installation Command: Run the following command to automatically download and install the extension:\nquarto add coatless-quarto/adsense\nThis command installs the adsense extension in the _extensions subdirectory of your Quarto project. If you’re utilizing version control, make sure to include this directory in your repository.",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "qgads-installation.html#usage",
+    "href": "qgads-installation.html#usage",
+    "title": "Installation Guide for Quarto Adsense Extension",
     "section": "Usage",
-    "text": "Usage\nThere are two ways you can setup the extension: 1. in a separate configuration file (_quarto.yml or _metadata.yml) or 2. inside a document’s header.\n\nMulti-page Projects: Websites\nIf you have a website or book, you can use either the _quarto.yml or _metadata.yml files to avoid needing to consistently set the value. This means, you would only need to include:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nIf you wish to disable ads on a specific page, then add to the document’s YAML header area:\nadsense:\n  enable-ads: false\nFor more information, please see Quarto’s documentation on Shared Metadata.\n\n\nSingle Page Projects: HTML Document\nIf you only have one HTML document, we recommend setting up the extension by placing the required fields into the document’s header section, e.g.\n---\ntitle: \"Demo Setup\"\nauthor: \"FirstName LastName\"\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\n---",
+    "text": "Usage\nYou can configure the adsense extension in either of the following ways:\n\nGlobal Configuration Using a Configuration File: Set up the extension globally by incorporating the relevant configuration in either the _quarto.yml or _metadata.yml file. This ensures consistent usage across all documents in your project.\nDocument-specific Configuration in YAML Header: Customize the extension settings for individual documents by adding configuration details to the YAML header of the respective Quarto document. This approach allows for fine-tuned control on a per-document basis.\n\nSelect the configuration method that best suits your project’s needs to learn more!",
     "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#disclaimer",
-    "href": "index.html#disclaimer",
-    "title": "Home",
-    "section": "Disclaimer",
-    "text": "Disclaimer\nThis Quarto extension is open source software and is not affiliated with Google. The extension is at best a community effort to simplify the integration of Google’s Adsense product inside of Quarto websites.",
-    "crumbs": [
-      "Home"
+      "Installation"
     ]
   },
   {
@@ -136,6 +136,61 @@
     "crumbs": [
       "Demos",
       "Adding Ads for One Webpage in the Header"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-global-configuration.html",
+    "href": "qgads-ad-global-configuration.html",
+    "title": "Global Adsense Configuration for Multi-page Projects",
+    "section": "",
+    "text": "This example demonstrates how to globally enable ads across all webpages by specifying options in either the _quarto.yml or _metadata.yml files. This allows you to avoid the need for repetitive configurations by centralizing the setup.",
+    "crumbs": [
+      "Demos",
+      "Global Adsense Configuration for Multi-page Projects"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-global-configuration.html#overview",
+    "href": "qgads-ad-global-configuration.html#overview",
+    "title": "Global Adsense Configuration for Multi-page Projects",
+    "section": "",
+    "text": "This example demonstrates how to globally enable ads across all webpages by specifying options in either the _quarto.yml or _metadata.yml files. This allows you to avoid the need for repetitive configurations by centralizing the setup.",
+    "crumbs": [
+      "Demos",
+      "Global Adsense Configuration for Multi-page Projects"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-global-configuration.html#global-configuration",
+    "href": "qgads-ad-global-configuration.html#global-configuration",
+    "title": "Global Adsense Configuration for Multi-page Projects",
+    "section": "Global Configuration",
+    "text": "Global Configuration\nTo globally set Adsense parameters for your project, insert the following snippet into the chosen metadata file (_quarto.yml or _metadata.yml):\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n  filters:\n    - adsense\nThis configuration ensures that the specified Google Adsense publisher ID is applied consistently across all pages within your project.\nTo find your Google Adsense publisher ID, please see Google’s Find your Publisher ID documentation.",
+    "crumbs": [
+      "Demos",
+      "Global Adsense Configuration for Multi-page Projects"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-global-configuration.html#page-specific-configuration",
+    "href": "qgads-ad-global-configuration.html#page-specific-configuration",
+    "title": "Global Adsense Configuration for Multi-page Projects",
+    "section": "Page-specific Configuration",
+    "text": "Page-specific Configuration\nIf you need to disable ads on a specific page, you can easily do so by adding the following YAML code to the header area of the document:\nadsense:\n  enable-ads: false\nThis local configuration takes precedence over the global settings, allowing for fine-grained control on a per-page basis.\nFor more detailed insights into shared metadata and global configurations, refer to Quarto’s documentation on Shared Metadata.",
+    "crumbs": [
+      "Demos",
+      "Global Adsense Configuration for Multi-page Projects"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-global-configuration.html#result",
+    "href": "qgads-ad-global-configuration.html#result",
+    "title": "Global Adsense Configuration for Multi-page Projects",
+    "section": "Result",
+    "text": "Result\nAds should now be served across all pages or a directory of pages on your Quarto website.",
+    "crumbs": [
+      "Demos",
+      "Global Adsense Configuration for Multi-page Projects"
     ]
   },
   {

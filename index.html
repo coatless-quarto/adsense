@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -100,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4979996562647159" crossorigin="anonymous"></script>
 
 
 </head>
@@ -153,6 +119,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./qgads-installation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installation</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
@@ -162,6 +134,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./qgads-ad-global-configuration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Global Adsense Configuration for Multi-page Projects</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./qgads-ad-localized-page.html" class="sidebar-item-text sidebar-link">
@@ -244,59 +222,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The <code>adsense</code> extension allows you to incorporate <a href="https://adsense.google.com/start/">Google Adsense</a> ad’s on various <a href="https://quarto.org/">Quarto</a> formats, including <a href="https://quarto.org/docs/output-formats/html-basics.html">HTML</a>, <a href="https://quarto.org/docs/websites/">Websites</a>, and <a href="https://quarto.org/docs/books">Books</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://codespaces.new/coatless-quarto/adsense"><img src="https://github.com/codespaces/badge.svg" class="img-fluid figure-img" alt="Open in GitHub Codespaces"></a></p>
-<figcaption>Open in GitHub Codespaces</figcaption>
-</figure>
+<p>The <code>adsense</code> extension allows you to incorporate <a href="https://adsense.google.com/start/">Google Adsense</a> ad’s on various <a href="https://quarto.org/">Quarto</a> formats, including <a href="https://quarto.org/docs/output-formats/html-basics.html">HTML</a>, <a href="https://quarto.org/docs/websites/">Websites</a>, and <a href="https://quarto.org/docs/books">Books</a>. This extension is required as <a href="https://github.com/quarto-dev/quarto-cli/discussions/2898#discussioncomment-3905621">Quarto does <strong>not</strong> natively support Google Adsense</a>, but <a href="https://quarto.org/docs/websites/website-tools.html#google-analytics">does have support for Google Analytics</a>.</p>
+<p>Ready to get started? Check out the <a href="./qgads-installation.html">installation steps</a> and the preferred <a href="./qgads-ad-global-configuration.html">setup approach using a global configuration</a>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>This extension is required as <a href="https://github.com/quarto-dev/quarto-cli/discussions/2898#discussioncomment-3905621">Quarto does <strong>not</strong> natively support Google Adsense</a>, but <a href="https://quarto.org/docs/websites/website-tools.html#google-analytics">does have support for Google Analytics</a>.</p>
-<section id="installation" class="level2">
-<h2 class="anchored" data-anchor-id="installation">Installation</h2>
-<p>To install the <code>adsense</code> extension, follow these steps:</p>
-<ol type="1">
-<li><p>Open your terminal.</p></li>
-<li><p>Execute the following command:</p></li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> add coatless-quarto/adsense</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This command will download and install the extension under the <code>_extensions</code> subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.</p>
-</section>
-<section id="usage" class="level2">
-<h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>There are two ways you can setup the extension: 1. in a separate configuration file (<code>_quarto.yml</code> or <code>_metadata.yml</code>) or 2. inside a document’s header.</p>
-<section id="multi-page-projects-websites" class="level3">
-<h3 class="anchored" data-anchor-id="multi-page-projects-websites">Multi-page Projects: Websites</h3>
-<p>If you have a website or book, you can use either the <a href="https://quarto.org/docs/projects/quarto-projects.html#project-metadata"><code>_quarto.yml</code></a> or <a href="https://quarto.org/docs/projects/quarto-projects.html#directory-metadata"><code>_metadata.yml</code></a> files to avoid needing to consistently set the value. This means, you would only need to include:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adsense</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">publisher-id</span><span class="kw">:</span><span class="at"> ca-pub-XXXXXXXXXXXXXXXX</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> adsense</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you wish to disable ads on a specific page, then add to the document’s YAML header area:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adsense</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">enable-ads</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For more information, please see Quarto’s documentation on <a href="https://quarto.org/docs/projects/quarto-projects.html#shared-metadata">Shared Metadata</a>.</p>
-</section>
-<section id="single-page-projects-html-document" class="level3">
-<h3 class="anchored" data-anchor-id="single-page-projects-html-document">Single Page Projects: HTML Document</h3>
-<p>If you only have one HTML document, we recommend setting up the extension by placing the required fields into the document’s header section, e.g.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Demo Setup"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"FirstName LastName"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">adsense</span><span class="kw">:</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">publisher-id</span><span class="kw">:</span><span class="at"> ca-pub-XXXXXXXXXXXXXXXX</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> adsense</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="disclaimer" class="level2">
-<h2 class="anchored" data-anchor-id="disclaimer">Disclaimer</h2>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>This Quarto extension is open source software and is <strong>not affiliated with</strong> Google. The extension is at best a community effort to simplify the integration of Google’s Adsense product inside of Quarto websites.</p>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
