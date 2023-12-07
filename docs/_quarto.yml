@@ -19,6 +19,12 @@ website:
         contents:
         - qgads-ad-localized-page.qmd
         - qgads-ad-free-page.qmd
+      - section: "Support"
+        contents:
+        - text: "FAQ"
+          href: qgads-faq.qmd
+        - text: "Submit an issue"
+          href: https://github.com/coatless-quarto/adsense/issues/new/choose
       - section: "Extra"
         contents:
         - qgads-release-notes.qmd

@@ -22,6 +22,7 @@ adsense:
 ## Documentation
 
 - Added an example showing an ad-free page.
+- Added an FAQ page.
 
 ## Deployment
 
