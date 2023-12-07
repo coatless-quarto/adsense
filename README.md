@@ -1,6 +1,6 @@
-# adsense: A Quarto Extension for Adding Google Adsense to Quarto HTML Projects
+# quarto-google-adsense: A Quarto Extension for Google Adsense
 
-The `adsense` extension allows you to incorporate [Google Adsense](https://adsense.google.com/start/) ad's on various [Quarto](https://quarto.org/) formats, including [HTML](https://quarto.org/docs/output-formats/html-basics.html), [Websites](https://quarto.org/docs/websites/), and [Books](https://quarto.org/docs/books). 
+The `adsense` extension allows you to incorporate [Google Adsense (GADS)](https://adsense.google.com/start/) ad's on various [Quarto](https://quarto.org/) formats, including [HTML](https://quarto.org/docs/output-formats/html-basics.html), [Websites](https://quarto.org/docs/websites/), and [Books](https://quarto.org/docs/books). 
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/coatless-quarto/adsense)
 
@@ -57,3 +57,7 @@ adsense:
     - [Pandoc: Lua Filters](https://pandoc.org/lua-filters.html)
     - [Pandoc: Lua type reference](https://pandoc.org/lua-filters.html#lua-type-reference)
     - [Lua: Manual](https://www.lua.org/manual/5.4/)
+
+## Disclaimer
+
+This Quarto extension is open source software and is **not affiliated with** Google. The extension is at best a community effort to simplify the integration of Google's Adsense product inside of Quarto websites.

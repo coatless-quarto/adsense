@@ -65,3 +65,8 @@ filters:
 - adsense
 ---
 ```
+
+## Disclaimer
+
+This Quarto extension is open source software and is **not affiliated with** Google. The extension is at best a community effort to simplify the integration of Google's Adsense product inside of Quarto websites.
+
