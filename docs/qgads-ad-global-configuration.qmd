@@ -1,0 +1,39 @@
+---
+title: "Global Adsense Configuration for Multi-page Projects"
+---
+
+## Overview
+
+This example demonstrates how to globally enable ads across all webpages by specifying options in either the [`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata) files. This allows you to avoid the need for repetitive configurations by centralizing the setup. 
+
+## Global Configuration
+
+To globally set Adsense parameters for your project, insert the following snippet into the chosen metadata file ([`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata)):
+
+```yaml
+adsense:
+  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+  filters:
+    - adsense
+```
+
+This configuration ensures that the specified Google Adsense publisher ID is applied consistently across all pages within your project.
+
+To find your Google Adsense publisher ID, please see Google's [Find your Publisher ID](https://support.google.com/adsense/answer/105516?hl=en) documentation.
+
+## Page-specific Configuration
+
+If you need to disable ads on a specific page, you can easily do so by adding the following YAML code to the header area of the document:
+
+```yaml
+adsense:
+  enable-ads: false
+```
+
+This local configuration takes precedence over the global settings, allowing for fine-grained control on a per-page basis.
+
+For more detailed insights into shared metadata and global configurations, refer to Quarto's documentation on [Shared Metadata](https://quarto.org/docs/projects/quarto-projects.html#shared-metadata).
+
+## Result
+
+Ads should now be served across all pages or a directory of pages on your Quarto website.

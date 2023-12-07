@@ -1,72 +1,11 @@
 ---
 title: "Home"
-adsense:
-  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
-filters:
-- adsense
 ---
 
-The `adsense` extension allows you to incorporate [Google Adsense](https://adsense.google.com/start/) ad's on various [Quarto](https://quarto.org/) formats, including [HTML](https://quarto.org/docs/output-formats/html-basics.html), [Websites](https://quarto.org/docs/websites/), and [Books](https://quarto.org/docs/books). 
+The `adsense` extension allows you to incorporate [Google Adsense](https://adsense.google.com/start/) ad's on various [Quarto](https://quarto.org/) formats, including [HTML](https://quarto.org/docs/output-formats/html-basics.html), [Websites](https://quarto.org/docs/websites/), and [Books](https://quarto.org/docs/books). This extension is required as [Quarto does **not** natively support Google Adsense](https://github.com/quarto-dev/quarto-cli/discussions/2898#discussioncomment-3905621), but [does have support for Google Analytics](https://quarto.org/docs/websites/website-tools.html#google-analytics).
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/coatless-quarto/adsense)
+Ready to get started? Check out the [installation steps](qgads-installation.qmd) and the preferred [setup approach using a global configuration](qgads-ad-global-configuration.qmd). 
 
-This extension is required as [Quarto does **not** natively support Google Adsense](https://github.com/quarto-dev/quarto-cli/discussions/2898#discussioncomment-3905621), but [does have support for Google Analytics](https://quarto.org/docs/websites/website-tools.html#google-analytics).
-
-## Installation
-
-To install the `adsense` extension, follow these steps:
-
-1. Open your terminal.
-
-2. Execute the following command:
-
-```bash
-quarto add coatless-quarto/adsense
-```
-
-This command will download and install the extension under the `_extensions` subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.
-
-## Usage
-
-There are two ways you can setup the extension: 1. in a separate configuration file (`_quarto.yml` or `_metadata.yml`) or 2. inside a document's header.
-
-### Multi-page Projects: Websites
-
-If you have a website or book, you can use either the [`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata) files to avoid needing to consistently set the value. This means, you would only need to include:
-
-```yml
-adsense:
-  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
-
-filters:
-- adsense
-```
-
-If you wish to disable ads on a specific page, then add to the document's YAML header area:
-
-```yml
-adsense:
-  enable-ads: false
-```
-
-For more information, please see Quarto's documentation on [Shared Metadata](https://quarto.org/docs/projects/quarto-projects.html#shared-metadata).
-
-### Single Page Projects: HTML Document
-
-If you only have one HTML document, we recommend setting up the extension by placing the required fields into the document's header section, e.g.
-
-```yml
----
-title: "Demo Setup"
-author: "FirstName LastName"
-adsense:
-  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
-filters:
-- adsense
----
-```
-
-## Disclaimer
-
+:::{.callout-important}
 This Quarto extension is open source software and is **not affiliated with** Google. The extension is at best a community effort to simplify the integration of Google's Adsense product inside of Quarto websites.
-
+:::

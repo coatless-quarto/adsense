@@ -1,0 +1,31 @@
+---
+title: "Installation Guide for Quarto Adsense Extension"
+---
+
+## Installation
+
+To seamlessly integrate the `adsense` extension into your Quarto project, follow these straightforward steps:
+
+1. **Open Your Terminal:**
+   Open your terminal or command prompt.
+
+2. **Execute the Installation Command:**
+   Run the following command to automatically download and install the extension:
+
+   ```bash
+   quarto add coatless-quarto/adsense
+   ```
+
+   This command installs the `adsense` extension in the `_extensions` subdirectory of your Quarto project. If you're utilizing version control, make sure to include this directory in your repository.
+
+## Usage
+
+You can configure the `adsense` extension in either of the following ways:
+
+1. [Global Configuration Using a Configuration File](qgads-ad-localized-page.qmd):
+   Set up the extension globally by incorporating the relevant configuration in either the [`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata) file. This ensures consistent usage across all documents in your project.
+
+2. [Document-specific Configuration in YAML Header](qgads-ad-global-configuration.qmd):
+   Customize the extension settings for individual documents by adding configuration details to the YAML header of the respective Quarto document. This approach allows for fine-tuned control on a per-document basis.
+
+Select the configuration method that best suits your project's needs to learn more!

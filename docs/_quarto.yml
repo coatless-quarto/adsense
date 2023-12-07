@@ -15,8 +15,11 @@ website:
     contents: 
       - text: "Home"
         file: index.qmd
+      - text: "Installation"
+        file: qgads-installation.qmd
       - section: "Demos"
         contents:
+        - qgads-ad-global-configuration.qmd
         - qgads-ad-localized-page.qmd
         - qgads-ad-free-page.qmd
       - section: "Support"

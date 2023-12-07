@@ -22,7 +22,16 @@ This command will download and install the extension under the `_extensions` sub
 
 ## Usage
 
-Open either the [`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata) Project file and add the following:
+There are two modes available for the extension: 
+
+1. A global configuration that allows a consistent option to be set for multiple pages with an option to opt a page out.
+2. A localized single page configuration.
+
+**Note:** Ads may take up to an hour to appear on the page/project.
+
+### Multi-page Projects: Websites and Books
+
+If you have a website or book, you can use either the [`_quarto.yml`](https://quarto.org/docs/projects/quarto-projects.html#project-metadata) or [`_metadata.yml`](https://quarto.org/docs/projects/quarto-projects.html#directory-metadata) files to avoid needing to consistently set the value. Add into the configuration file: 
 
 ```yml
 adsense:
@@ -34,15 +43,29 @@ filters:
 
 where `ca-pub-XXXXXXXXXXXXXXXX` in `publisher-id` is your Google Adsense [Publisher ID](https://support.google.com/adsense/answer/105516?hl=en).
 
-
-Ads may be disabled on a specific page by adding to the generating document's YAML header area:
+If you wish to disable ads on a specific page, then add to the Quarto document's YAML header area:
 
 ```yml
 adsense:
   enable-ads: false
 ```
 
-**Note:** Ads may take up to an hour to appear on the page/project.
+For more information, please see Quarto's documentation on [Shared Metadata](https://quarto.org/docs/projects/quarto-projects.html#shared-metadata).
+
+### Single Page Projects: HTML Document
+
+If you only have one HTML document, we recommend setting up the extension by placing the required fields into the document's header section, e.g.
+
+```yml
+---
+title: "Demo Setup"
+author: "FirstName LastName"
+adsense:
+  publisher-id: ca-pub-XXXXXXXXXXXXXXXX
+filters:
+- adsense
+---
+```
 
 ## References
 
