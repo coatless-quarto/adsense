@@ -12,13 +12,16 @@ website:
     tools:
       - icon: github
         href: https://github.com/coatless-quarto/adsense/
-    contents:
-      - section: "Basics"
+    contents: 
+      - text: "Home"
+        file: index.qmd
+      - section: "Demos"
         contents:
-          - index.qmd
-          - qgads-ad-localized-page.qmd
-          - qgads-ad-free-page.qmd
-          - qgads-release-notes.qmd
+        - qgads-ad-localized-page.qmd
+        - qgads-ad-free-page.qmd
+      - section: "Extra"
+        contents:
+        - qgads-release-notes.qmd
 
 # Register Adsense plugin to appear on all pages
 adsense:
