@@ -34,6 +34,14 @@ filters:
 
 where `ca-pub-XXXXXXXXXXXXXXXX` in `publisher-id` is your Google Adsense [Publisher ID](https://support.google.com/adsense/answer/105516?hl=en).
 
+
+Ads may be disabled on a specific page by adding to the generating document's YAML header area:
+
+```yml
+adsense:
+  enable-ads: false
+```
+
 **Note:** Ads may take up to an hour to appear on the page/project.
 
 ## References
