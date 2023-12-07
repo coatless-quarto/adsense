@@ -19,6 +19,14 @@ adsense:
   enable-ads: false
 ```
 
+## Documentation
+
+- Added an example showing an ad-free page.
+
+## Deployment
+
+- Moved the documentation website under `docs/`
+
 # 1.0.0: Monetize (11-11-2023)
 
 ## Features
