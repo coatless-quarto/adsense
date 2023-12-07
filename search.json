@@ -1,13 +1,111 @@
 [
   {
-    "objectID": "example.html",
-    "href": "example.html",
-    "title": "Demo: Ads In Header",
+    "objectID": "qgads-release-notes.html",
+    "href": "qgads-release-notes.html",
+    "title": "Release Notes",
     "section": "",
-    "text": "On this page, you should see the Google Adsense code being found inside of the page’s header tag, e.g. \nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\nNote: Ads may take up to an hour to appear on the page/project for the first time the webpage is opened.",
+    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false"
+  },
+  {
+    "objectID": "qgads-release-notes.html#features",
+    "href": "qgads-release-notes.html#features",
+    "title": "Release Notes",
+    "section": "",
+    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false"
+  },
+  {
+    "objectID": "qgads-release-notes.html#features-1",
+    "href": "qgads-release-notes.html#features-1",
+    "title": "Release Notes",
+    "section": "Features",
+    "text": "Features\n\nNew Google Adsense Extension for Quarto allowing for global or per-page insertion of ad units\n\n\nInstallation\nTo install the adsense extension, follow these steps:\n\nOpen your terminal.\nExecute the following command:\n\nquarto add coatless-quarto/adsense\nThis command will download and install the extension under the _extensions subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.\n\n\nUsage\nOpen either the _quarto.yml or _metadata.yml Project file and add the following:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nwhere ca-pub-XXXXXXXXXXXXXXXX in publisher-id is your Google Adsense Publisher ID.\n\n\n\n\n\n\nNote\n\n\n\nAds may take up to an hour to appear on the page/project."
+  },
+  {
+    "objectID": "qgads-ad-free-page.html",
+    "href": "qgads-ad-free-page.html",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "section": "",
+    "text": "This example demonstrates how to disable ads on specific pages by utilizing a YAML configuration setting. By following these steps, you can easily prevent the insertion of Google Adsense units on individual pages, ensuring an ad-free experience for your users on pages that you do not wish to monetize.",
     "crumbs": [
       "Basics",
-      "Demo: Ads In Header"
+      "Enabling an Ad-Free Page with Global Configuration"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-free-page.html#overview",
+    "href": "qgads-ad-free-page.html#overview",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "section": "",
+    "text": "This example demonstrates how to disable ads on specific pages by utilizing a YAML configuration setting. By following these steps, you can easily prevent the insertion of Google Adsense units on individual pages, ensuring an ad-free experience for your users on pages that you do not wish to monetize.",
+    "crumbs": [
+      "Basics",
+      "Enabling an Ad-Free Page with Global Configuration"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-free-page.html#configuration",
+    "href": "qgads-ad-free-page.html#configuration",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "section": "Configuration",
+    "text": "Configuration\nTo disable ads on a per-page basis, insert the following code snippet into the YAML header of the desired page:\nadsense:\n  enable-ads: false",
+    "crumbs": [
+      "Basics",
+      "Enabling an Ad-Free Page with Global Configuration"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-free-page.html#result",
+    "href": "qgads-ad-free-page.html#result",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "section": "Result",
+    "text": "Result\nUpon setting enable-ads to false, the Google Adsense unit will not be included in the specified page. Consequently, ads will be effectively disabled, providing a cleaner and ad-free presentation for users accessing that particular page.",
+    "crumbs": [
+      "Basics",
+      "Enabling an Ad-Free Page with Global Configuration"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-localized-page.html",
+    "href": "qgads-ad-localized-page.html",
+    "title": "Adding Ads for One Webpage in the Header",
+    "section": "",
+    "text": "This example provides instructions on incorporating Google Adsense code into the Quarto document generating a specific web page, allowing for the placement of ads only within the selected page. By following the steps outlined below, you can seamlessly integrate ads into the desired page.",
+    "crumbs": [
+      "Basics",
+      "Adding Ads for One Webpage in the Header"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-localized-page.html#overview",
+    "href": "qgads-ad-localized-page.html#overview",
+    "title": "Adding Ads for One Webpage in the Header",
+    "section": "",
+    "text": "This example provides instructions on incorporating Google Adsense code into the Quarto document generating a specific web page, allowing for the placement of ads only within the selected page. By following the steps outlined below, you can seamlessly integrate ads into the desired page.",
+    "crumbs": [
+      "Basics",
+      "Adding Ads for One Webpage in the Header"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-localized-page.html#implementation",
+    "href": "qgads-ad-localized-page.html#implementation",
+    "title": "Adding Ads for One Webpage in the Header",
+    "section": "Implementation",
+    "text": "Implementation\nTo include Google Adsense in the header, insert the following YAML code snippet into the Quarto document’s header section:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\nThis configuration specifies the publisher ID and activates the adsense filter, ensuring that the ads are properly integrated into the header.\n\n\n\n\n\n\nNote\n\n\n\nPlease be aware that it may take up to an hour for ads to appear on the page or project for the first time the webpage is opened. This delay is standard and expected as the Adsense system processes the request and delivers the ads accordingly.",
+    "crumbs": [
+      "Basics",
+      "Adding Ads for One Webpage in the Header"
+    ]
+  },
+  {
+    "objectID": "qgads-ad-localized-page.html#result",
+    "href": "qgads-ad-localized-page.html#result",
+    "title": "Adding Ads for One Webpage in the Header",
+    "section": "Result",
+    "text": "Result\nAds should now be served only on a single page within your Quarto website.",
+    "crumbs": [
+      "Basics",
+      "Adding Ads for One Webpage in the Header"
     ]
   },
   {
@@ -37,7 +135,7 @@
     "href": "index.html#usage",
     "title": "Home",
     "section": "Usage",
-    "text": "Usage\nThere are two ways you can setup the extension: 1. in a separate configuration file (_quarto.yml or _metadata.yml) or 2. inside a document’s header.\n\nMulti-page Projects: Websites\nIf you have a website or book, you can use either the _quarto.yml or _metadata.yml files to avoid needing to consistently set the value. This means, you would only need to include:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nFor more information, please see Quarto’s documentation on Shared Metadata.\n\n\nSingle Page Projects: HTML Document\nIf you only have one HTML document, we recommend setting up the extension by placing the required fields into the document’s header section, e.g.\n---\ntitle: \"Demo Setup\"\nauthor: \"FirstName LastName\"\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\n---",
+    "text": "Usage\nThere are two ways you can setup the extension: 1. in a separate configuration file (_quarto.yml or _metadata.yml) or 2. inside a document’s header.\n\nMulti-page Projects: Websites\nIf you have a website or book, you can use either the _quarto.yml or _metadata.yml files to avoid needing to consistently set the value. This means, you would only need to include:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nIf you wish to disable ads on a specific page, then add to the document’s YAML header area:\nadsense:\n  enable-ads: false\nFor more information, please see Quarto’s documentation on Shared Metadata.\n\n\nSingle Page Projects: HTML Document\nIf you only have one HTML document, we recommend setting up the extension by placing the required fields into the document’s header section, e.g.\n---\ntitle: \"Demo Setup\"\nauthor: \"FirstName LastName\"\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\n---",
     "crumbs": [
       "Basics",
       "Home"
