@@ -8,7 +8,7 @@ format:
     toc: true
 ---
 
-# 2.0.0: Selective Monetize (12-??-2023) [DEV]
+# 2.0.0: Selective Monetize (12-06-2023) [DEV]
 
 ## Features
 
@@ -21,6 +21,7 @@ adsense:
 
 ## Documentation
 
+- Reorganized getting started documentation.
 - Added an example showing an ad-free page.
 - Added an FAQ page.
 
