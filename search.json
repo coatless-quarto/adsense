@@ -4,7 +4,7 @@
     "href": "qgads-release-notes.html",
     "title": "Release Notes",
     "section": "",
-    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false\n\n\n\n\nAdded an example showing an ad-free page.\nAdded an FAQ page.\n\n\n\n\n\nMoved the documentation website under docs/",
+    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false\n\n\n\n\nReorganized getting started documentation.\nAdded an example showing an ad-free page.\nAdded an FAQ page.\n\n\n\n\n\nMoved the documentation website under docs/",
     "crumbs": [
       "Extra",
       "Release Notes"
@@ -26,7 +26,7 @@
     "href": "qgads-release-notes.html#documentation",
     "title": "Release Notes",
     "section": "",
-    "text": "Added an example showing an ad-free page.\nAdded an FAQ page.",
+    "text": "Reorganized getting started documentation.\nAdded an example showing an ad-free page.\nAdded an FAQ page.",
     "crumbs": [
       "Extra",
       "Release Notes"
