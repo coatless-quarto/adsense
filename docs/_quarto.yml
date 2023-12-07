@@ -18,6 +18,7 @@ website:
           - index.qmd
           - qgads-ad-localized-page.qmd
           - qgads-ad-free-page.qmd
+          - qgads-release-notes.qmd
 
 # Register Adsense plugin to appear on all pages
 adsense:
