@@ -20,8 +20,21 @@ local function isVariablePopulated(s)
   return not isVariableEmpty(s)
 end
 
+-- Check if a value is true or false, including string representations
 local function isBoolean(value)
-  return value == true or value == false
+  if type(value) == "boolean" then
+    return true
+  elseif type(value) == "string" then
+    local lowercaseValue = value:lower()
+    return lowercaseValue == "true" or lowercaseValue == "false"
+  else
+    return false
+  end
+end
+
+-- Coerce a "true" or "false" string to `true`/`false`.
+local function stringToBoolean(str)
+  return str == "true" and true or false
 end
 
 -- Ad unit HTML
@@ -46,19 +59,27 @@ function Meta(m)
   -- Check for configuration
   local adsense_meta = m.adsense
   if isVariableEmpty(adsense_meta) then
-    quarto.log.error("The Quarto project is missing the `adsense` key in either the document header, `_quarto.yml`, or `_metadata.yml`.")
+    quarto.log.error(
+      "The Quarto project is missing the `adsense` key in either" ..
+       "\n - the document header,\n - `_quarto.yml`, or\n - `_metadata.yml`."
+    )
   end
-
 
   -- Retrieve enable-ads from meta
   if isVariablePopulated(adsense_meta['enable-ads']) then
     enableAds = pandoc.utils.stringify(adsense_meta['enable-ads'])
+
     if not isBoolean(enableAds) then
-      quarto.log.error("The `enable-ads` must be either `true` or `false`, not `" .. showAds .. "`. Please fix by correcting the value in the current document, the projects `_quarto.yml`, or `_metadata.yml` for the directory.")
+      quarto.log.error("The `enable-ads` must be either `true` or `false`, not `" .. enableAds .. "`." ..
+      "\nPlease fix by correcting the value supplied to `enable-ads` in the current document.")
     end
+
+    -- Apply conversion from string to boolean
+    enableAds = stringToBoolean(enableAds)
 
     -- If ads should be disabled; exit here to avoid running into a publisher-id unset error.
     if enableAds == false then
+      quarto.log.output("=== Escaping EnableAds ===")
       return m
     end 
   end
@@ -68,7 +89,11 @@ function Meta(m)
   if isVariablePopulated(adsense_meta['publisher-id']) then
     publisher_id = pandoc.utils.stringify(adsense_meta['publisher-id'])
   else 
-    quarto.log.error("The `publisher-id` is not set. Please set the `publisher-id` by either the value in the current document, the projects `_quarto.yml`, or `_metadata.yml` for the directory.")
+    quarto.log.error(
+      "The `publisher-id` is not set. Please set the `publisher-id` by either:" ..
+      "\n - the value in the current document," .. 
+      "\n - the projects `_quarto.yml`, or" ..
+      "\n - `_metadata.yml` for the directory.\n")
   end 
 
   if enableAds and isAdsenseUnitMissing then
