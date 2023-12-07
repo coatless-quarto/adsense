@@ -79,7 +79,6 @@ function Meta(m)
 
     -- If ads should be disabled; exit here to avoid running into a publisher-id unset error.
     if enableAds == false then
-      quarto.log.output("=== Escaping EnableAds ===")
       return m
     end 
   end
