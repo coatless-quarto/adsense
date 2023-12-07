@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-11-11">
+<meta name="dcterms.date" content="2023-12-06">
 
-<title>adsense - Release Notes</title>
+<title>adsense - Frequently Asked Questions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./qgads-release-notes.html">Extra</a></li><li class="breadcrumb-item"><a href="./qgads-release-notes.html">Release Notes</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./qgads-faq.html">Support</a></li><li class="breadcrumb-item"><a href="./qgads-faq.html">FAQ</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -188,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./qgads-faq.html" class="sidebar-item-text sidebar-link">
+  <a href="./qgads-faq.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./qgads-release-notes.html" class="sidebar-item-text sidebar-link active">
+  <a href="./qgads-release-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Release Notes</span></a>
   </div>
 </li>
@@ -227,29 +227,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#selective-monetize-12--2023-dev" id="toc-selective-monetize-12--2023-dev" class="nav-link active" data-scroll-target="#selective-monetize-12--2023-dev">2.0.0: Selective Monetize (12-??-2023) [DEV]</a>
+  <li><a href="#general-questions" id="toc-general-questions" class="nav-link active" data-scroll-target="#general-questions">General Questions</a>
   <ul class="collapse">
-  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
-  <li><a href="#deployment" id="toc-deployment" class="nav-link" data-scroll-target="#deployment">Deployment</a></li>
+  <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link" data-scroll-target="#what-is-quarto">What is Quarto?</a></li>
+  <li><a href="#how-can-i-integrate-google-adsense-into-my-quarto-generated-website" id="toc-how-can-i-integrate-google-adsense-into-my-quarto-generated-website" class="nav-link" data-scroll-target="#how-can-i-integrate-google-adsense-into-my-quarto-generated-website">How can I integrate Google Adsense into my Quarto-generated website?</a></li>
   </ul></li>
-  <li><a href="#monetize-11-11-2023" id="toc-monetize-11-11-2023" class="nav-link" data-scroll-target="#monetize-11-11-2023">1.0.0: Monetize (11-11-2023)</a>
+  <li><a href="#adsense-configuration" id="toc-adsense-configuration" class="nav-link" data-scroll-target="#adsense-configuration">Adsense Configuration</a>
   <ul class="collapse">
-  <li><a href="#features-1" id="toc-features-1" class="nav-link" data-scroll-target="#features-1">Features</a>
-  <ul class="collapse">
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  <li><a href="#where-do-i-find-my-google-adsense-publisher-id" id="toc-where-do-i-find-my-google-adsense-publisher-id" class="nav-link" data-scroll-target="#where-do-i-find-my-google-adsense-publisher-id">Where do I find my Google Adsense publisher ID?</a></li>
+  <li><a href="#how-do-i-add-google-adsense-to-a-specific-page-using-quarto" id="toc-how-do-i-add-google-adsense-to-a-specific-page-using-quarto" class="nav-link" data-scroll-target="#how-do-i-add-google-adsense-to-a-specific-page-using-quarto">How do I add Google Adsense to a specific page using Quarto?</a></li>
+  <li><a href="#can-i-prevent-the-placement-of-adsense-ads-on-certain-webpages-within-my-quarto-generated-website" id="toc-can-i-prevent-the-placement-of-adsense-ads-on-certain-webpages-within-my-quarto-generated-website" class="nav-link" data-scroll-target="#can-i-prevent-the-placement-of-adsense-ads-on-certain-webpages-within-my-quarto-generated-website">Can I prevent the placement of Adsense ads on certain webpages within my Quarto-generated website?</a></li>
   </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#the-ads-are-not-appearing-on-my-quarto-generated-website.-what-could-be-the-issue" id="toc-the-ads-are-not-appearing-on-my-quarto-generated-website.-what-could-be-the-issue" class="nav-link" data-scroll-target="#the-ads-are-not-appearing-on-my-quarto-generated-website.-what-could-be-the-issue">The ads are not appearing on my Quarto-generated website. What could be the issue?</a></li>
+  <li><a href="#are-there-any-specific-requirements-for-the-quarto-version-to-support-google-adsense-integration" id="toc-are-there-any-specific-requirements-for-the-quarto-version-to-support-google-adsense-integration" class="nav-link" data-scroll-target="#are-there-any-specific-requirements-for-the-quarto-version-to-support-google-adsense-integration">Are there any specific requirements for the Quarto version to support Google Adsense integration?</a></li>
+  </ul></li>
+  <li><a href="#further-assistance" id="toc-further-assistance" class="nav-link" data-scroll-target="#further-assistance">Further Assistance</a>
+  <ul class="collapse">
+  <li><a href="#where-can-i-get-more-help-with-integrating-google-adsense-into-my-quarto-generated-website" id="toc-where-can-i-get-more-help-with-integrating-google-adsense-into-my-quarto-generated-website" class="nav-link" data-scroll-target="#where-can-i-get-more-help-with-integrating-google-adsense-into-my-quarto-generated-website">Where can I get more help with integrating Google Adsense into my Quarto-generated website?</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/coatless-quarto/adsense/edit/main/qgads-release-notes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/coatless-quarto/adsense/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/coatless-quarto/adsense/edit/main/qgads-faq.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/coatless-quarto/adsense/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./qgads-release-notes.html">Extra</a></li><li class="breadcrumb-item"><a href="./qgads-release-notes.html">Release Notes</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./qgads-faq.html">Support</a></li><li class="breadcrumb-item"><a href="./qgads-faq.html">FAQ</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Release Notes</h1>
+<h1 class="title">Frequently Asked Questions</h1>
 </div>
 
 
@@ -260,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 11, 2023</p>
+      <p class="date">December 6, 2023</p>
     </div>
   </div>
   
@@ -278,72 +284,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="selective-monetize-12--2023-dev" class="level1">
-<h1>2.0.0: Selective Monetize (12-??-2023) [DEV]</h1>
-<section id="features" class="level2">
-<h2 class="anchored" data-anchor-id="features">Features</h2>
-<ul>
-<li>Added <code>enable-ads</code> option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adsense</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">enable-ads</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="general-questions" class="level1">
+<h1>General Questions</h1>
+<section id="what-is-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-quarto">What is Quarto?</h2>
+<p><a href="https://quarto.org/">Quarto</a> is a versatile, open-source scientific and technical publishing system. Documents can be authored that contain prose alongside of dynamic content generated by running Python, R, Julia, and Observable code.</p>
 </section>
-<section id="documentation" class="level2">
-<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
-<ul>
-<li>Added an example showing an ad-free page.</li>
-<li>Added an FAQ page.</li>
-</ul>
-</section>
-<section id="deployment" class="level2">
-<h2 class="anchored" data-anchor-id="deployment">Deployment</h2>
-<ul>
-<li>Moved the documentation website under <code>docs/</code></li>
-</ul>
+<section id="how-can-i-integrate-google-adsense-into-my-quarto-generated-website" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-integrate-google-adsense-into-my-quarto-generated-website">How can I integrate Google Adsense into my Quarto-generated website?</h2>
+<p>To integrate Google Adsense into your <a href="https://quarto.org/">Quarto</a>-generated website, you can utilize the <code>adsense</code> configuration option in the YAML header of your Quarto pages or project configuration. In particular, please set the <code>publisher-id</code> key to your Google Publisher ID.</p>
 </section>
 </section>
-<section id="monetize-11-11-2023" class="level1">
-<h1>1.0.0: Monetize (11-11-2023)</h1>
-<section id="features-1" class="level2">
-<h2 class="anchored" data-anchor-id="features-1">Features</h2>
-<ul>
-<li>New Google Adsense Extension for Quarto allowing for global or per-page insertion of ad units</li>
-</ul>
-<section id="installation" class="level3">
-<h3 class="anchored" data-anchor-id="installation">Installation</h3>
-<p>To install the <code>adsense</code> extension, follow these steps:</p>
-<ol type="1">
-<li><p>Open your terminal.</p></li>
-<li><p>Execute the following command:</p></li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> add coatless-quarto/adsense</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This command will download and install the extension under the <code>_extensions</code> subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.</p>
+<section id="adsense-configuration" class="level1">
+<h1>Adsense Configuration</h1>
+<section id="where-do-i-find-my-google-adsense-publisher-id" class="level2">
+<h2 class="anchored" data-anchor-id="where-do-i-find-my-google-adsense-publisher-id">Where do I find my Google Adsense publisher ID?</h2>
+<p>Your Google Adsense publisher ID is available in your Adsense account. Log in to your Adsense account, navigate to the “Settings” page, and you will find your publisher ID there.</p>
+<p>For more details, please see Google’s <a href="https://support.google.com/adsense/answer/105516?hl=en">Find your Publisher ID</a> documentation.</p>
 </section>
-<section id="usage" class="level3">
-<h3 class="anchored" data-anchor-id="usage">Usage</h3>
-<p>Open either the <a href="https://quarto.org/docs/projects/quarto-projects.html#project-metadata"><code>_quarto.yml</code></a> or <a href="https://quarto.org/docs/projects/quarto-projects.html#directory-metadata"><code>_metadata.yml</code></a> Project file and add the following:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adsense</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">publisher-id</span><span class="kw">:</span><span class="at"> ca-pub-XXXXXXXXXXXXXXXX</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> adsense</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>where <code>ca-pub-XXXXXXXXXXXXXXXX</code> in <code>publisher-id</code> is your Google Adsense <a href="https://support.google.com/adsense/answer/105516?hl=en">Publisher ID</a>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ads may take up to an hour to appear on the page/project.</p>
-</div>
-</div>
+<section id="how-do-i-add-google-adsense-to-a-specific-page-using-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-i-add-google-adsense-to-a-specific-page-using-quarto">How do I add Google Adsense to a specific page using Quarto?</h2>
+<p>In the YAML header of the specific page where you want to add Google Adsense, include the following configuration:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adsense</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">publisher-id</span><span class="kw">:</span><span class="at"> YOUR_PUBLISHER_ID</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> adsense</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace <code>YOUR_PUBLISHER_ID</code> with your actual Google Adsense publisher ID. This should look similar to <code>ca-pub-XXXXXXXXXXXXXXXX</code> with the <code>XXXXXXXXXXXXXXXX</code> representing your unique ID.</p>
+</section>
+<section id="can-i-prevent-the-placement-of-adsense-ads-on-certain-webpages-within-my-quarto-generated-website" class="level2">
+<h2 class="anchored" data-anchor-id="can-i-prevent-the-placement-of-adsense-ads-on-certain-webpages-within-my-quarto-generated-website">Can I prevent the placement of Adsense ads on certain webpages within my Quarto-generated website?</h2>
+<p>Yes, you can customize the placement of Adsense ads within your Quarto-generated website by setting the <code>enable-ads</code> option in the Quarto document’s YAML header.</p>
+<p>For example, ads can be suppressed on a given by setting:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">adsense</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">enable-ads</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="troubleshooting" class="level1">
+<h1>Troubleshooting</h1>
+<section id="the-ads-are-not-appearing-on-my-quarto-generated-website.-what-could-be-the-issue" class="level2">
+<h2 class="anchored" data-anchor-id="the-ads-are-not-appearing-on-my-quarto-generated-website.-what-could-be-the-issue">The ads are not appearing on my Quarto-generated website. What could be the issue?</h2>
+<p>If ads are not appearing, first ensure that your Adsense account is active and in good standing. Additionally, check the configuration in the YAML header of the specific page to confirm that the <code>enable-ads</code> or <code>filters</code> options are set appropriately. Ads may also take some time (up to an hour) to appear on the page for the first time it is opened.</p>
+</section>
+<section id="are-there-any-specific-requirements-for-the-quarto-version-to-support-google-adsense-integration" class="level2">
+<h2 class="anchored" data-anchor-id="are-there-any-specific-requirements-for-the-quarto-version-to-support-google-adsense-integration">Are there any specific requirements for the Quarto version to support Google Adsense integration?</h2>
+<p>Ensure that you are using a Quarto version that supports the <code>adsense</code> Extension. This is usually checked when the extension is first installed.</p>
+</section>
+</section>
+<section id="further-assistance" class="level1">
+<h1>Further Assistance</h1>
+<section id="where-can-i-get-more-help-with-integrating-google-adsense-into-my-quarto-generated-website" class="level2">
+<h2 class="anchored" data-anchor-id="where-can-i-get-more-help-with-integrating-google-adsense-into-my-quarto-generated-website">Where can I get more help with integrating Google Adsense into my Quarto-generated website?</h2>
+<p>For additional assistance or if you encounter issues specific to Quarto or Google Adsense integration, feel free to reach out to in the project’s <a href="https://github.com/coatless-quarto/adsense/issues/new/choose">issue tracker</a> or consult the <a href="https://quarto.org/docs/guide/">official Quarto documentation</a>. Google also provides support resources for Google Adsense through their <a href="https://support.google.com/adsense#topic=3373519">help center</a>, <a href="https://support.google.com/adsense/community?hl=en">user-to-user community</a>, and <a href="https://support.google.com/adsense/gethelp">contact page</a>.</p>
+<hr>
+<p><strong>Note:</strong> This FAQ is intended as a general guide. Always refer to the latest <a href="https://quarto.org/docs/guide/">Quarto</a> and <a href="https://support.google.com/adsense#topic=3373519">Google Adsense</a> documentation for the most up-to-date information.</p>
 
 
-</section>
 </section>
 </section>
 

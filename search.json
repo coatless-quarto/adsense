@@ -4,7 +4,7 @@
     "href": "qgads-release-notes.html",
     "title": "Release Notes",
     "section": "",
-    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false\n\n\n\n\nAdded an example showing an ad-free page.\n\n\n\n\n\nMoved the documentation website under docs/",
+    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false\n\n\n\n\nAdded an example showing an ad-free page.\nAdded an FAQ page.\n\n\n\n\n\nMoved the documentation website under docs/",
     "crumbs": [
       "Extra",
       "Release Notes"
@@ -26,7 +26,7 @@
     "href": "qgads-release-notes.html#documentation",
     "title": "Release Notes",
     "section": "",
-    "text": "Added an example showing an ad-free page.",
+    "text": "Added an example showing an ad-free page.\nAdded an FAQ page.",
     "crumbs": [
       "Extra",
       "Release Notes"
@@ -55,47 +55,43 @@
     ]
   },
   {
-    "objectID": "qgads-ad-free-page.html",
-    "href": "qgads-ad-free-page.html",
-    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
     "section": "",
-    "text": "This example demonstrates how to disable ads on specific pages by utilizing a YAML configuration setting. By following these steps, you can easily prevent the insertion of Google Adsense units on individual pages, ensuring an ad-free experience for your users on pages that you do not wish to monetize.",
+    "text": "The adsense extension allows you to incorporate Google Adsense ad’s on various Quarto formats, including HTML, Websites, and Books.\nThis extension is required as Quarto does not natively support Google Adsense, but does have support for Google Analytics.",
     "crumbs": [
-      "Demos",
-      "Enabling an Ad-Free Page with Global Configuration"
+      "Home"
     ]
   },
   {
-    "objectID": "qgads-ad-free-page.html#overview",
-    "href": "qgads-ad-free-page.html#overview",
-    "title": "Enabling an Ad-Free Page with Global Configuration",
-    "section": "",
-    "text": "This example demonstrates how to disable ads on specific pages by utilizing a YAML configuration setting. By following these steps, you can easily prevent the insertion of Google Adsense units on individual pages, ensuring an ad-free experience for your users on pages that you do not wish to monetize.",
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "Home",
+    "section": "Installation",
+    "text": "Installation\nTo install the adsense extension, follow these steps:\n\nOpen your terminal.\nExecute the following command:\n\nquarto add coatless-quarto/adsense\nThis command will download and install the extension under the _extensions subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.",
     "crumbs": [
-      "Demos",
-      "Enabling an Ad-Free Page with Global Configuration"
+      "Home"
     ]
   },
   {
-    "objectID": "qgads-ad-free-page.html#configuration",
-    "href": "qgads-ad-free-page.html#configuration",
-    "title": "Enabling an Ad-Free Page with Global Configuration",
-    "section": "Configuration",
-    "text": "Configuration\nTo disable ads on a per-page basis, insert the following code snippet into the YAML header of the desired page:\nadsense:\n  enable-ads: false",
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "Home",
+    "section": "Usage",
+    "text": "Usage\nThere are two ways you can setup the extension: 1. in a separate configuration file (_quarto.yml or _metadata.yml) or 2. inside a document’s header.\n\nMulti-page Projects: Websites\nIf you have a website or book, you can use either the _quarto.yml or _metadata.yml files to avoid needing to consistently set the value. This means, you would only need to include:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nIf you wish to disable ads on a specific page, then add to the document’s YAML header area:\nadsense:\n  enable-ads: false\nFor more information, please see Quarto’s documentation on Shared Metadata.\n\n\nSingle Page Projects: HTML Document\nIf you only have one HTML document, we recommend setting up the extension by placing the required fields into the document’s header section, e.g.\n---\ntitle: \"Demo Setup\"\nauthor: \"FirstName LastName\"\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\n---",
     "crumbs": [
-      "Demos",
-      "Enabling an Ad-Free Page with Global Configuration"
+      "Home"
     ]
   },
   {
-    "objectID": "qgads-ad-free-page.html#result",
-    "href": "qgads-ad-free-page.html#result",
-    "title": "Enabling an Ad-Free Page with Global Configuration",
-    "section": "Result",
-    "text": "Result\nUpon setting enable-ads to false, the Google Adsense unit will not be included in the specified page. Consequently, ads will be effectively disabled, providing a cleaner and ad-free presentation for users accessing that particular page.",
+    "objectID": "index.html#disclaimer",
+    "href": "index.html#disclaimer",
+    "title": "Home",
+    "section": "Disclaimer",
+    "text": "Disclaimer\nThis Quarto extension is open source software and is not affiliated with Google. The extension is at best a community effort to simplify the integration of Google’s Adsense product inside of Quarto websites.",
     "crumbs": [
-      "Demos",
-      "Enabling an Ad-Free Page with Global Configuration"
+      "Home"
     ]
   },
   {
@@ -143,43 +139,146 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "qgads-ad-free-page.html",
+    "href": "qgads-ad-free-page.html",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
     "section": "",
-    "text": "The adsense extension allows you to incorporate Google Adsense ad’s on various Quarto formats, including HTML, Websites, and Books.\nThis extension is required as Quarto does not natively support Google Adsense, but does have support for Google Analytics.",
+    "text": "This example demonstrates how to disable ads on specific pages by utilizing a YAML configuration setting. By following these steps, you can easily prevent the insertion of Google Adsense units on individual pages, ensuring an ad-free experience for your users on pages that you do not wish to monetize.",
     "crumbs": [
-      "Home"
+      "Demos",
+      "Enabling an Ad-Free Page with Global Configuration"
     ]
   },
   {
-    "objectID": "index.html#installation",
-    "href": "index.html#installation",
-    "title": "Home",
-    "section": "Installation",
-    "text": "Installation\nTo install the adsense extension, follow these steps:\n\nOpen your terminal.\nExecute the following command:\n\nquarto add coatless-quarto/adsense\nThis command will download and install the extension under the _extensions subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.",
+    "objectID": "qgads-ad-free-page.html#overview",
+    "href": "qgads-ad-free-page.html#overview",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "section": "",
+    "text": "This example demonstrates how to disable ads on specific pages by utilizing a YAML configuration setting. By following these steps, you can easily prevent the insertion of Google Adsense units on individual pages, ensuring an ad-free experience for your users on pages that you do not wish to monetize.",
     "crumbs": [
-      "Home"
+      "Demos",
+      "Enabling an Ad-Free Page with Global Configuration"
     ]
   },
   {
-    "objectID": "index.html#usage",
-    "href": "index.html#usage",
-    "title": "Home",
-    "section": "Usage",
-    "text": "Usage\nThere are two ways you can setup the extension: 1. in a separate configuration file (_quarto.yml or _metadata.yml) or 2. inside a document’s header.\n\nMulti-page Projects: Websites\nIf you have a website or book, you can use either the _quarto.yml or _metadata.yml files to avoid needing to consistently set the value. This means, you would only need to include:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nIf you wish to disable ads on a specific page, then add to the document’s YAML header area:\nadsense:\n  enable-ads: false\nFor more information, please see Quarto’s documentation on Shared Metadata.\n\n\nSingle Page Projects: HTML Document\nIf you only have one HTML document, we recommend setting up the extension by placing the required fields into the document’s header section, e.g.\n---\ntitle: \"Demo Setup\"\nauthor: \"FirstName LastName\"\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\nfilters:\n- adsense\n---",
+    "objectID": "qgads-ad-free-page.html#configuration",
+    "href": "qgads-ad-free-page.html#configuration",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "section": "Configuration",
+    "text": "Configuration\nTo disable ads on a per-page basis, insert the following code snippet into the YAML header of the desired page:\nadsense:\n  enable-ads: false",
     "crumbs": [
-      "Home"
+      "Demos",
+      "Enabling an Ad-Free Page with Global Configuration"
     ]
   },
   {
-    "objectID": "index.html#disclaimer",
-    "href": "index.html#disclaimer",
-    "title": "Home",
-    "section": "Disclaimer",
-    "text": "Disclaimer\nThis Quarto extension is open source software and is not affiliated with Google. The extension is at best a community effort to simplify the integration of Google’s Adsense product inside of Quarto websites.",
+    "objectID": "qgads-ad-free-page.html#result",
+    "href": "qgads-ad-free-page.html#result",
+    "title": "Enabling an Ad-Free Page with Global Configuration",
+    "section": "Result",
+    "text": "Result\nUpon setting enable-ads to false, the Google Adsense unit will not be included in the specified page. Consequently, ads will be effectively disabled, providing a cleaner and ad-free presentation for users accessing that particular page.",
     "crumbs": [
-      "Home"
+      "Demos",
+      "Enabling an Ad-Free Page with Global Configuration"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html",
+    "href": "qgads-faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Quarto is a versatile, open-source scientific and technical publishing system. Documents can be authored that contain prose alongside of dynamic content generated by running Python, R, Julia, and Observable code.\n\n\n\nTo integrate Google Adsense into your Quarto-generated website, you can utilize the adsense configuration option in the YAML header of your Quarto pages or project configuration. In particular, please set the publisher-id key to your Google Publisher ID.",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#what-is-quarto",
+    "href": "qgads-faq.html#what-is-quarto",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Quarto is a versatile, open-source scientific and technical publishing system. Documents can be authored that contain prose alongside of dynamic content generated by running Python, R, Julia, and Observable code.",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#how-can-i-integrate-google-adsense-into-my-quarto-generated-website",
+    "href": "qgads-faq.html#how-can-i-integrate-google-adsense-into-my-quarto-generated-website",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "To integrate Google Adsense into your Quarto-generated website, you can utilize the adsense configuration option in the YAML header of your Quarto pages or project configuration. In particular, please set the publisher-id key to your Google Publisher ID.",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#where-do-i-find-my-google-adsense-publisher-id",
+    "href": "qgads-faq.html#where-do-i-find-my-google-adsense-publisher-id",
+    "title": "Frequently Asked Questions",
+    "section": "Where do I find my Google Adsense publisher ID?",
+    "text": "Where do I find my Google Adsense publisher ID?\nYour Google Adsense publisher ID is available in your Adsense account. Log in to your Adsense account, navigate to the “Settings” page, and you will find your publisher ID there.\nFor more details, please see Google’s Find your Publisher ID documentation.",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#how-do-i-add-google-adsense-to-a-specific-page-using-quarto",
+    "href": "qgads-faq.html#how-do-i-add-google-adsense-to-a-specific-page-using-quarto",
+    "title": "Frequently Asked Questions",
+    "section": "How do I add Google Adsense to a specific page using Quarto?",
+    "text": "How do I add Google Adsense to a specific page using Quarto?\nIn the YAML header of the specific page where you want to add Google Adsense, include the following configuration:\nadsense:\n  publisher-id: YOUR_PUBLISHER_ID\n\nfilters:\n  - adsense\nReplace YOUR_PUBLISHER_ID with your actual Google Adsense publisher ID. This should look similar to ca-pub-XXXXXXXXXXXXXXXX with the XXXXXXXXXXXXXXXX representing your unique ID.",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#can-i-prevent-the-placement-of-adsense-ads-on-certain-webpages-within-my-quarto-generated-website",
+    "href": "qgads-faq.html#can-i-prevent-the-placement-of-adsense-ads-on-certain-webpages-within-my-quarto-generated-website",
+    "title": "Frequently Asked Questions",
+    "section": "Can I prevent the placement of Adsense ads on certain webpages within my Quarto-generated website?",
+    "text": "Can I prevent the placement of Adsense ads on certain webpages within my Quarto-generated website?\nYes, you can customize the placement of Adsense ads within your Quarto-generated website by setting the enable-ads option in the Quarto document’s YAML header.\nFor example, ads can be suppressed on a given by setting:\nadsense:\n  enable-ads: false",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#the-ads-are-not-appearing-on-my-quarto-generated-website.-what-could-be-the-issue",
+    "href": "qgads-faq.html#the-ads-are-not-appearing-on-my-quarto-generated-website.-what-could-be-the-issue",
+    "title": "Frequently Asked Questions",
+    "section": "The ads are not appearing on my Quarto-generated website. What could be the issue?",
+    "text": "The ads are not appearing on my Quarto-generated website. What could be the issue?\nIf ads are not appearing, first ensure that your Adsense account is active and in good standing. Additionally, check the configuration in the YAML header of the specific page to confirm that the enable-ads or filters options are set appropriately. Ads may also take some time (up to an hour) to appear on the page for the first time it is opened.",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#are-there-any-specific-requirements-for-the-quarto-version-to-support-google-adsense-integration",
+    "href": "qgads-faq.html#are-there-any-specific-requirements-for-the-quarto-version-to-support-google-adsense-integration",
+    "title": "Frequently Asked Questions",
+    "section": "Are there any specific requirements for the Quarto version to support Google Adsense integration?",
+    "text": "Are there any specific requirements for the Quarto version to support Google Adsense integration?\nEnsure that you are using a Quarto version that supports the adsense Extension. This is usually checked when the extension is first installed.",
+    "crumbs": [
+      "Support",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "qgads-faq.html#where-can-i-get-more-help-with-integrating-google-adsense-into-my-quarto-generated-website",
+    "href": "qgads-faq.html#where-can-i-get-more-help-with-integrating-google-adsense-into-my-quarto-generated-website",
+    "title": "Frequently Asked Questions",
+    "section": "Where can I get more help with integrating Google Adsense into my Quarto-generated website?",
+    "text": "Where can I get more help with integrating Google Adsense into my Quarto-generated website?\nFor additional assistance or if you encounter issues specific to Quarto or Google Adsense integration, feel free to reach out to in the project’s issue tracker or consult the official Quarto documentation. Google also provides support resources for Google Adsense through their help center, user-to-user community, and contact page.\n\nNote: This FAQ is intended as a general guide. Always refer to the latest Quarto and Google Adsense documentation for the most up-to-date information.",
+    "crumbs": [
+      "Support",
+      "FAQ"
     ]
   }
 ]
