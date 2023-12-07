@@ -4,35 +4,55 @@
     "href": "qgads-release-notes.html",
     "title": "Release Notes",
     "section": "",
-    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false\n\n\n\n\nAdded an example showing an ad-free page.\n\n\n\n\n\nMoved the documentation website under docs/"
+    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false\n\n\n\n\nAdded an example showing an ad-free page.\n\n\n\n\n\nMoved the documentation website under docs/",
+    "crumbs": [
+      "Basics",
+      "Release Notes"
+    ]
   },
   {
     "objectID": "qgads-release-notes.html#features",
     "href": "qgads-release-notes.html#features",
     "title": "Release Notes",
     "section": "",
-    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false"
+    "text": "Added enable-ads option to selectively disable ads on a per-page basis when a global Google Adsense configuration is used.\n\nadsense:\n  enable-ads: false",
+    "crumbs": [
+      "Basics",
+      "Release Notes"
+    ]
   },
   {
     "objectID": "qgads-release-notes.html#documentation",
     "href": "qgads-release-notes.html#documentation",
     "title": "Release Notes",
     "section": "",
-    "text": "Added an example showing an ad-free page."
+    "text": "Added an example showing an ad-free page.",
+    "crumbs": [
+      "Basics",
+      "Release Notes"
+    ]
   },
   {
     "objectID": "qgads-release-notes.html#deployment",
     "href": "qgads-release-notes.html#deployment",
     "title": "Release Notes",
     "section": "",
-    "text": "Moved the documentation website under docs/"
+    "text": "Moved the documentation website under docs/",
+    "crumbs": [
+      "Basics",
+      "Release Notes"
+    ]
   },
   {
     "objectID": "qgads-release-notes.html#features-1",
     "href": "qgads-release-notes.html#features-1",
     "title": "Release Notes",
     "section": "Features",
-    "text": "Features\n\nNew Google Adsense Extension for Quarto allowing for global or per-page insertion of ad units\n\n\nInstallation\nTo install the adsense extension, follow these steps:\n\nOpen your terminal.\nExecute the following command:\n\nquarto add coatless-quarto/adsense\nThis command will download and install the extension under the _extensions subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.\n\n\nUsage\nOpen either the _quarto.yml or _metadata.yml Project file and add the following:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nwhere ca-pub-XXXXXXXXXXXXXXXX in publisher-id is your Google Adsense Publisher ID.\n\n\n\n\n\n\nNote\n\n\n\nAds may take up to an hour to appear on the page/project."
+    "text": "Features\n\nNew Google Adsense Extension for Quarto allowing for global or per-page insertion of ad units\n\n\nInstallation\nTo install the adsense extension, follow these steps:\n\nOpen your terminal.\nExecute the following command:\n\nquarto add coatless-quarto/adsense\nThis command will download and install the extension under the _extensions subdirectory of your Quarto project. If you are using version control, ensure that you include this directory in your repository.\n\n\nUsage\nOpen either the _quarto.yml or _metadata.yml Project file and add the following:\nadsense:\n  publisher-id: ca-pub-XXXXXXXXXXXXXXXX\n\nfilters:\n- adsense\nwhere ca-pub-XXXXXXXXXXXXXXXX in publisher-id is your Google Adsense Publisher ID.\n\n\n\n\n\n\nNote\n\n\n\nAds may take up to an hour to appear on the page/project.",
+    "crumbs": [
+      "Basics",
+      "Release Notes"
+    ]
   },
   {
     "objectID": "qgads-ad-free-page.html",
