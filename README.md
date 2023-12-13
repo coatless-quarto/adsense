@@ -67,10 +67,44 @@ filters:
 ---
 ```
 
+### Google Adsense Setup: Adding `ads.txt`
+
+To ensure smooth integration with Google Adsense, it's essential to create a [standalone file named `ads.txt`](https://support.google.com/adsense/answer/12171612) within your project directory that identifies the domain as being authorized to serve ads. Follow these steps to include your [Google Publisher ID](https://support.google.com/adsense/answer/105516?hl=en):
+
+1. **Create `ads.txt` File:**
+   In the root of your project, create a new file named `ads.txt`.
+
+2. **Add Google Publisher ID:**
+   Open `ads.txt` and insert the following line, replacing `XXXXXXXXXXXXXXXX` with your actual Google Publisher ID:
+
+   ```
+   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+   ```
+
+   This line informs Google's web crawler about your association with the provided Publisher ID. For an example, please see the [`docs/ads.txt`](https://github.com/coatless-quarto/adsense/blob/main/README.md).
+
+3. **Save and Include in Version Control:**
+   Save the changes to `ads.txt` and ensure that the file is included in your version control system if you're using one.
+
+4. **Register `ads.txt` in _quarto.yml:**
+   Open the `_quarto.yml` configuration and add the `resources` line under the project key.
+
+   ```yaml
+   project:
+     type: website # default, book, revealjs
+     resources:
+       - ads.txt 
+   ```
+
+   This ensures the additional file resources are copied to the output directory. 
+
+This step is crucial for validating your ownership of the website and enabling a smooth interaction between your Quarto-generated content and Google Adsense. Remember to replace `XXXXXXXXXXXXXXXX` with your specific Google Publisher ID.
+
 ## References
 
 - Google Adsense
     - [Google Adsense: Find Publisher ID](https://support.google.com/adsense/answer/105516?hl=en)
+    - [Google Adsense: Ads.txt guide](https://support.google.com/adsense/answer/12171612)
     - [Google Adsense: Get and copy the AdSense code](https://support.google.com/adsense/answer/9274019?hl=en)
     - [Google Adsense: Where to place the AdSense code in your HTML](https://support.google.com/adsense/answer/9274516?sjid=14850419192472362507-NC)
 - Quarto

@@ -8,6 +8,13 @@ format:
     toc: true
 ---
 
+
+# 2.1.0-Dev: ??? (??-??-??) [DEV]
+
+## Documentation
+
+- Added documentation to both the README and Installation guide detailing the setup process of `ads.txt`. ([#1](https://github.com/coatless-quarto/adsense/issues/1), h/t [@JosiahParry](https://github.com/JosiahParry))
+
 # 2.0.0: Selective Monetize (12-06-2023)
 
 ## Features
