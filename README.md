@@ -41,7 +41,7 @@ filters:
 - adsense
 ```
 
-where `ca-pub-XXXXXXXXXXXXXXXX` in `publisher-id` is your Google Adsense [Publisher ID](https://support.google.com/adsense/answer/105516?hl=en).
+where `XXXXXXXXXXXXXXXX` in `publisher-id` is your Google Adsense [Publisher ID](https://support.google.com/adsense/answer/105516?hl=en).
 
 If you wish to disable ads on a specific page, then add to the Quarto document's YAML header area:
 
@@ -69,13 +69,13 @@ filters:
 
 ### Google Adsense Setup: Adding `ads.txt`
 
-To ensure smooth integration with Google Adsense, it's essential to create a [standalone file named `ads.txt`](https://support.google.com/adsense/answer/12171612) within your project directory that identifies the domain as being authorized to serve ads. Follow these steps to include your [Google Publisher ID](https://support.google.com/adsense/answer/105516?hl=en):
+To ensure smooth integration with Google Adsense, it's essential to create a [standalone file named `ads.txt`](https://support.google.com/adsense/answer/12171612) within your project directory that identifies the domain as being authorized to serve ads. Follow these steps to include the `ads.txt` file:
 
 1. **Create `ads.txt` File:**
    In the root of your project, create a new file named `ads.txt`.
 
 2. **Add Google Publisher ID:**
-   Open `ads.txt` and insert the following line, replacing `XXXXXXXXXXXXXXXX` with your actual Google Publisher ID:
+   Open `ads.txt` and insert the following line, replacing `XXXXXXXXXXXXXXXX` with your actual [Google Publisher ID](https://support.google.com/adsense/answer/105516?hl=en):
 
    ```
    google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
