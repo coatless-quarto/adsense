@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.521">
+<meta name="generator" content="quarto-1.4.526">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -265,6 +265,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> add coatless-quarto/adsense</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This command installs the <code>adsense</code> extension in the <code>_extensions</code> subdirectory of your Quarto project. If you’re utilizing version control, make sure to include this directory in your repository.</p></li>
 </ol>
+</section>
+<section id="google-adsense-setup-adding-ads.txt" class="level2">
+<h2 class="anchored" data-anchor-id="google-adsense-setup-adding-ads.txt">Google Adsense Setup: Adding <code>ads.txt</code></h2>
+<p>To ensure smooth integration with Google Adsense, it’s essential to create a <a href="https://support.google.com/adsense/answer/12171612">standalone file named <code>ads.txt</code></a> within your project directory that identifies the domain as being authorized to serve ads. Follow these steps to include your <a href="https://support.google.com/adsense/answer/105516?hl=en">Google Publisher ID</a>:</p>
+<ol type="1">
+<li><p><strong>Create <code>ads.txt</code> File:</strong> In the root of your project, create a new file named <code>ads.txt</code>.</p></li>
+<li><p><strong>Add Google Publisher ID:</strong> Open <code>ads.txt</code> and insert the following line, replacing <code>XXXXXXXXXXXXXXXX</code> with your actual Google Publisher ID:</p>
+<pre><code>google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0</code></pre>
+<p>This line informs Google’s web crawler about your association with the provided Publisher ID. For an example, please see the <a href="https://github.com/coatless-quarto/adsense/blob/main/README.md"><code>docs/ads.txt</code></a>.</p></li>
+<li><p><strong>Save and Include in Version Control:</strong> Save the changes to <code>ads.txt</code> and ensure that the file is included in your version control system if you’re using one.</p></li>
+<li><p>**Register <code>ads.txt</code> in _quarto.yml:** Open the <code>_quarto.yml</code> configuration and add the <code>resources</code> line under the project key.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span><span class="co"> # default, book, revealjs</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">resources</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> ads.txt </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This ensures the additional file resources are copied to the output directory.</p></li>
+</ol>
+<p>This step is crucial for validating your ownership of the website and enabling a smooth interaction between your Quarto-generated content and Google Adsense. Remember to replace <code>XXXXXXXXXXXXXXXX</code> with your specific Google Publisher ID.</p>
 </section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage</h2>
