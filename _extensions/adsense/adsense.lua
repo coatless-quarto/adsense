@@ -64,6 +64,7 @@ function Meta(m)
       "The Quarto project is missing the `adsense` key in either" ..
        "\n - the document header,\n - `_quarto.yml`, or\n - `_metadata.yml`."
     )
+    return m
   end
 
   -- Retrieve enable-ads from meta
