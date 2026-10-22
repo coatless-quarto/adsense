@@ -54,7 +54,8 @@ function Meta(m)
   -- Detect HTML format (excluding epub which won't handle fa)
   if not quarto.doc.is_format("html:js") then
     quarto.log.error("The `adsense` extensions works only on HTML powered Quarto projects.")
-  end 
+    return m
+  end
 
   -- Check for configuration
   local adsense_meta = m.adsense
