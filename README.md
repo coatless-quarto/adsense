@@ -81,7 +81,7 @@ To ensure smooth integration with Google Adsense, it's essential to create a [st
    google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
    ```
 
-   This line informs Google's web crawler about your association with the provided Publisher ID. For an example, please see the [`docs/ads.txt`](https://github.com/coatless-quarto/adsense/blob/main/README.md).
+   This line informs Google's web crawler about your association with the provided Publisher ID. For an example, please see the [`docs/ads.txt`](https://github.com/coatless-quarto/adsense/blob/main/docs/ads.txt).
 
 3. **Save and Include in Version Control:**
    Save the changes to `ads.txt` and ensure that the file is included in your version control system if you're using one.

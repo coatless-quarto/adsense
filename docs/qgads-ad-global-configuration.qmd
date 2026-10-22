@@ -13,8 +13,9 @@ To globally set Adsense parameters for your project, insert the following snippe
 ```yaml
 adsense:
   publisher-id: ca-pub-XXXXXXXXXXXXXXXX
-  filters:
-    - adsense
+
+filters:
+  - adsense
 ```
 
 This configuration ensures that the specified Google Adsense publisher ID is applied consistently across all pages within your project.
