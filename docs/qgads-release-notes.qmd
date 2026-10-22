@@ -8,7 +8,6 @@ format:
     toc: true
 ---
 
-
 # 2.1.0-Dev: ??? (??-??-??) [DEV]
 
 ## Breaking changes
@@ -17,17 +16,13 @@ format:
 
 ## Bug fixes
 
-- adsense no longer adds the Google Adsense script to non-HTML formats. Previously, PDF and Typst builds failed and Markdown output such as `gfm` contained a raw `<script>` tag.
-- adsense now renders documents that have no `adsense` key, without ads, and reports the missing key. Previously, the render failed with "attempt to index a nil value".
-- adsense now skips the ad unit and reports an error when ads are enabled but `publisher-id` is missing. Previously, the render failed with "attempt to concatenate a nil value".
-- `enable-ads` now accepts `true` and `false` in any letter case. Previously, a quoted `"True"` turned ads off.
+- Documents can render to PDF, Typst and Markdown alongside HTML; ads are added to HTML only.
+- Pages without an `adsense` key or a `publisher-id` render without ads.
 
 ## Documentation
 
 - Added documentation to both the README and Installation guide detailing the setup process of `ads.txt`. ([#1](https://github.com/coatless-quarto/adsense/issues/1), h/t [@JosiahParry](https://github.com/JosiahParry))
-- The global configuration example now places `filters:` at the top level instead of under `adsense:`, where it loaded no filter and showed no ads.
-- The `docs/ads.txt` example link in the README and Installation guide now points to the example file instead of the README.
-- The Installation guide's links to the global and document-specific configuration pages now open the matching pages.
+- The global configuration guide shows a working setup.
 
 # 2.0.0: Selective Monetize (12-06-2023)
 
