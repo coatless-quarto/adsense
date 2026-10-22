@@ -95,7 +95,8 @@ function Meta(m)
       "\n - the value in the current document," .. 
       "\n - the projects `_quarto.yml`, or" ..
       "\n - `_metadata.yml` for the directory.\n")
-  end 
+    return m
+  end
 
   if enableAds and isAdsenseUnitMissing then
     -- Avoid re-running insertion
