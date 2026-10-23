@@ -47,8 +47,8 @@ local function read_config(options)
   if enable_ads then
     local value = to_boolean(enable_ads)
     if value == nil then
-      quarto.log.error("The `enable-ads` must be either `true` or `false`, not `" .. enable_ads .. "`." ..
-      "\nPlease fix by correcting the value supplied to `enable-ads` in the current document.")
+      quarto.log.warning("The `enable-ads` option must be either `true` or `false`, not `" .. enable_ads .. "`, " ..
+      "so this page has no ads.\nPlease fix by correcting the value supplied to `enable-ads` in the current document.")
     end
     -- Any value other than `true` disables ads
     config.enable_ads = value == true
@@ -77,15 +77,15 @@ local function add_ad_unit(meta)
 
   -- The ad unit script needs an HTML format that runs JavaScript, which excludes EPUB
   if not quarto.doc.is_format("html:js") then
-    quarto.log.error("The `adsense` extensions works only on HTML powered Quarto projects.")
+    quarto.log.warning("The `adsense` extension works only with HTML formats, so this output has no ads.")
     return meta
   end
 
   -- Check for configuration
   local options = meta.adsense
   if options == nil or options == '' then
-    quarto.log.error(
-      "The Quarto project is missing the `adsense` key in either" ..
+    quarto.log.warning(
+      "The `adsense` key is missing, so this page has no ads. Set it in either" ..
        "\n - the document header,\n - `_quarto.yml`, or\n - `_metadata.yml`."
     )
     return meta
@@ -99,11 +99,11 @@ local function add_ad_unit(meta)
   end
 
   if not config.publisher_id then
-    quarto.log.error(
-      "The `publisher-id` is not set. Please set the `publisher-id` by either:" ..
-      "\n - the value in the current document," ..
-      "\n - the projects `_quarto.yml`, or" ..
-      "\n - `_metadata.yml` for the directory.\n")
+    quarto.log.warning(
+      "The `publisher-id` is not set, so this page has no ads. Please set the `publisher-id` in either:" ..
+      "\n - the current document," ..
+      "\n - the project's `_quarto.yml`, or" ..
+      "\n - `_metadata.yml` for the directory.")
     return meta
   end
 
