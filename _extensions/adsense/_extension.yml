@@ -1,7 +1,7 @@
 title: Adsense
 author: James Balamuta
 version: 2.1.0-dev.1
-quarto-required: ">=1.10.0"
+quarto-required: ">=1.11.0"
 contributes:
   filters:
     - adsense.lua
