@@ -60,7 +60,7 @@ If ads are not appearing, first ensure that your Adsense account is active and i
 
 ## Are there any specific requirements for the Quarto version to support Google Adsense integration?
 
-The `adsense` extension requires Quarto 1.10 or later. This is usually checked when the extension is first installed.
+The `adsense` extension requires Quarto 1.11 or later. This is usually checked when the extension is first installed.
 
 # Further Assistance
 

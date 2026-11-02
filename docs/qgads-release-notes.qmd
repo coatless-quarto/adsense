@@ -12,7 +12,7 @@ format:
 
 ## Breaking changes
 
-- adsense now requires Quarto 1.10 or later.
+- adsense now requires Quarto 1.11 or later.
 
 ## Bug fixes
 
