@@ -119,6 +119,13 @@ This step is crucial for validating your ownership of the website and enabling a
 
 This Quarto extension is open source software and is **not affiliated with** Google. The extension is at best a community effort to simplify the integration of Google's Adsense product inside of Quarto websites.
 
+## Learn more
+
+- [Documentation](https://quarto.thecoatlessprofessor.com/adsense/)
+- [Release notes](https://quarto.thecoatlessprofessor.com/adsense/qgads-release-notes.html)
+- [Blog posts](https://blog.thecoatlessprofessor.com/projects/adsense/)
+- Discuss on [Mastodon](https://mastodon.social/@coatless/111537357826536710) or [Bluesky](https://bsky.app/profile/coatless.bsky.social/post/3kfwo4qzf6k2e)
+
 ## License
 
 adsense is licensed under AGPL-3.0-or-later with an exception: what you write and render with adsense stays yours, along with the output, under any terms you like. See [LICENSE](LICENSE) and [LICENSE-EXCEPTION.md](LICENSE-EXCEPTION.md).
