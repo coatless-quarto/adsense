@@ -1,0 +1,5 @@
+---
+title: "adsense: a page with ads"
+---
+
+Body text.

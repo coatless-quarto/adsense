@@ -1,0 +1,9 @@
+---
+title: "adsense: no publisher-id"
+adsense:
+  enable-ads: true
+filters:
+  - adsense
+---
+
+Body text.
