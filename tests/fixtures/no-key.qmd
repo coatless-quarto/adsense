@@ -1,0 +1,7 @@
+---
+title: "adsense: no adsense key"
+filters:
+  - adsense
+---
+
+Body text.
