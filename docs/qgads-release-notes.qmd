@@ -8,7 +8,7 @@ format:
     toc: true
 ---
 
-# 2.1.0-Dev: ??? (??-??-??) [DEV]
+# 2.1.0: Quiet Monetize (11-26-2026)
 
 ## Breaking changes
 
